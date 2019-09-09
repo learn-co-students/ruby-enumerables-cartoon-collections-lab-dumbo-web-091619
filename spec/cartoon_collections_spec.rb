@@ -3,11 +3,16 @@ require "spec_helper"
 describe "Cartoon Collections" do
   describe "#roll_call_dwarves" do
     it "prints out the 7 dwarfs in a numbered list" do
-      dwarves = ["Dopey", "Grumpy", "Bashful"]
+      dwarves = ["Dopey", "Grumpy", "Bashful",  "Grumpy"]
 
       output = capture_stdout do
         roll_call_dwarves(dwarves)
       end
+      def summon_captain_planet(array)
+   array.collect { |i| i.capitalize << "!" } 
+end	end
+
+
 
       # This regex allows for arbitrary characters between
       # the numbering and the name
